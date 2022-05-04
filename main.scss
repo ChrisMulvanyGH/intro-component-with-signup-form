@@ -37,27 +37,47 @@ img {
   max-width: 100%;
 }
 
-h1 {}
+h1 {
+  font-family: 'Poppins', sans-serif;
+}
 
-p {}
+p {
+  font-family: 'Poppins', sans-serif;
+}
 
 /* -------------------------------------------------------------------------------------------- */
 
-.container {}
+.container {
+  width: 80vw;
+  height: 100vh;
+  max-width: $mobile;
+}
 
-.title {}
+.title {
+  color: $grayishBlue;
+}
 
-.description {}
+.description {
+  color: $grayishBlue;
+}
 
 .signupForm {
 
-  .notice {}
+  .notice {
+    color: $grayishBlue;
+  }
 
-  .labels {}
+  .labels {
+    color: $grayishBlue;
+  }
 
-  .fields {}
+  .fields {
+    color: $grayishBlue;
+  }
 
-  .subBtn {}
+  .subBtn {
+    color: $green;
+  }
 
 }
 

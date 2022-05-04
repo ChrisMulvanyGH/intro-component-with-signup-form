@@ -27,7 +27,45 @@ img {
   max-width: 100%;
 }
 
+h1 {
+  font-family: 'Poppins', sans-serif;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+}
+
 /* -------------------------------------------------------------------------------------------- */
+.container {
+  width: 80vw;
+  height: 100vh;
+  max-width: 375px;
+}
+
+.title {
+  color: #b9b6d3;
+}
+
+.description {
+  color: #b9b6d3;
+}
+
+.signupForm .notice {
+  color: #b9b6d3;
+}
+
+.signupForm .labels {
+  color: #b9b6d3;
+}
+
+.signupForm .fields {
+  color: #b9b6d3;
+}
+
+.signupForm .subBtn {
+  color: #38cc8c;
+}
+
 .footer .attribution {
   font-size: 11px;
   text-align: center;
