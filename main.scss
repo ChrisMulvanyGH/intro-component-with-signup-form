@@ -1,15 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
 /* - VARIABLES - */
+
 /* -- TARGET SCREEN SIZES -- */
+$mobile: 375px;
+$desktop: 1440px;
+
 /* -- COLOURS -- */
+$red: hsl(0, 100%, 74%);
+$green: hsl(154, 59%, 51%);
+$blue: hsl(248, 32%, 49%);
+$darkBlue: hsl(249, 10%, 26%);
+$grayishBlue: hsl(246, 25%, 77%);
+
 /* -------------------------------------------------------------------------------------------- */
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body,
@@ -27,15 +37,43 @@ img {
   max-width: 100%;
 }
 
-/* -------------------------------------------------------------------------------------------- */
-.footer .attribution {
-  font-size: 11px;
-  text-align: center;
-}
+h1 {}
 
-.footer .attribution a {
-  color: #3e52a3;
-}
+p {}
 
 /* -------------------------------------------------------------------------------------------- */
-/*# sourceMappingURL=main.css.map */
+
+.container {}
+
+.title {}
+
+.description {}
+
+.signupForm {
+
+  .notice {}
+
+  .labels {}
+
+  .fields {}
+
+  .subBtn {}
+
+}
+
+.footer {
+
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: #3e52a3;
+  }
+
+}
+
+/* -------------------------------------------------------------------------------------------- */
+
+@media (min-width: $desktop) {}
