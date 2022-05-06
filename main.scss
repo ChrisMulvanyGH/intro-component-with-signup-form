@@ -15,6 +15,7 @@ $darkBlue: hsl(249, 10%, 26%);
 $grayishBlue: hsl(246, 25%, 77%);
 
 /* -- FONT SIZES -- */
+$ft-size-36: 2.25rem;
 $ft-size-27: 1.6875rem;
 $ft-size-17: 1.0625rem;
 $ft-size-16: 1rem;
@@ -66,6 +67,7 @@ p {
 .container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 90vw;
   height: 100vh;
   max-width: $mobile;
@@ -94,7 +96,7 @@ p {
 .notice {
   padding: 20px 0;
   width: 100%;
-  max-width: 327px;
+  min-width: 327px;
   min-height: 88px;
   background-color: $blue;
   font-size: $ft-size-17;
@@ -187,4 +189,62 @@ p {
 
 /* -------------------------------------------------------------------------------------------- */
 
-@media (min-width: $desktop) {}
+@media (min-width: 1440px) {
+
+  body {
+    background-image: url('/../images/bg-intro-desktop.png');
+  }
+
+  .container {
+    width: 90%;
+    max-width: $desktop;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .subtainer-left {
+    width: 100%;
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    .title {
+      font-size: 54px;
+      font-weight: 700;
+      text-align: left;
+      line-height: 1.2;
+    }
+
+    .description {
+      font-size: $ft-size-17;
+      text-align: left;
+    }
+  }
+  
+  .subtainer-right {
+    width: 100%;
+    max-width: 540px;
+
+    
+
+    .notice {
+      min-height: 60px;
+      margin-bottom: 24px;
+      .nline {
+        display: inline-block;
+      }
+    }
+
+    .signupForm {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

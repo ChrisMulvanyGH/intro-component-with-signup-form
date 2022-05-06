@@ -51,6 +51,9 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 90vw;
   height: 100vh;
   max-width: 375px;
@@ -78,7 +81,7 @@ p {
 .notice {
   padding: 20px 0;
   width: 100%;
-  max-width: 327px;
+  min-width: 327px;
   min-height: 88px;
   background-color: #6055a5;
   font-size: 1.0625rem;
@@ -175,4 +178,77 @@ p {
 }
 
 /* -------------------------------------------------------------------------------------------- */
+@media (min-width: 1440px) {
+  body {
+    background-image: url("/../images/bg-intro-desktop.png");
+  }
+  .container {
+    width: 90%;
+    max-width: 1440px;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .subtainer-left {
+    width: 100%;
+    max-width: 540px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .subtainer-left .title {
+    font-size: 54px;
+    font-weight: 700;
+    text-align: left;
+    line-height: 1.2;
+  }
+  .subtainer-left .description {
+    font-size: 1.0625rem;
+    text-align: left;
+  }
+  .subtainer-right {
+    width: 100%;
+    max-width: 540px;
+  }
+  .subtainer-right .notice {
+    min-height: 60px;
+    margin-bottom: 24px;
+  }
+  .subtainer-right .notice .nline {
+    display: inline-block;
+  }
+  .subtainer-right .signupForm {
+    padding: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 /*# sourceMappingURL=main.css.map */
