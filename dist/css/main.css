@@ -112,6 +112,9 @@ p {
           align-items: flex-start;
   background-color: white;
   border-radius: 8px;
+  margin-bottom: 68px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
 .signupForm .labels {
@@ -133,7 +136,33 @@ p {
 }
 
 .signupForm .subBtn {
-  color: #38cc8c;
+  width: 100%;
+  min-width: 279px;
+  min-height: 56px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background-color: #38cc8c;
+  text-transform: uppercase;
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-bottom: 0.875em;
+}
+
+.signupForm .tandcs {
+  padding: 0 .5em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+  color: #b9b6d3;
+}
+
+.signupForm .tandcs .highlight {
+  font-weight: 700;
+  color: #ff7a7a;
 }
 
 .footer .attribution {
