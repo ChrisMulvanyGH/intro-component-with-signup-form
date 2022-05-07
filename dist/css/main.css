@@ -116,8 +116,8 @@ p {
   background-color: white;
   border-radius: 8px;
   margin-bottom: 68px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-          box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 20px 20px, rgba(0, 0, 0, 0.23) 0px 15px 5px;
+          box-shadow: rgba(0, 0, 0, 0.19) 0px 20px 20px, rgba(0, 0, 0, 0.23) 0px 15px 5px;
 }
 
 .signupForm .labels {
@@ -157,7 +157,7 @@ p {
 .signupForm .tandcs {
   padding: 0 .5em;
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 24px;
   text-align: center;
   color: #b9b6d3;
@@ -183,9 +183,11 @@ p {
     background-image: url("/../images/bg-intro-desktop.png");
   }
   .container {
+    padding: 0 62px;
     width: 90%;
     max-width: 1440px;
     height: 100vh;
+    max-height: 800px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -202,9 +204,39 @@ p {
   .subtainer-left {
     width: 100%;
     max-width: 540px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    min-height: 560px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .subtainer-left .title {
+    font-size: 49px;
+    font-weight: 700;
+    text-align: left;
+    line-height: 1.2;
+    margin-bottom: 6.5px;
+  }
+  .subtainer-left .description {
+    font-size: 1rem;
+    text-align: left;
+  }
+  .subtainer-right {
+    width: 100%;
+    max-width: 540px;
+    min-height: 560px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -212,30 +244,22 @@ p {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-  }
-  .subtainer-left .title {
-    font-size: 54px;
-    font-weight: 700;
-    text-align: left;
-    line-height: 1.2;
-  }
-  .subtainer-left .description {
-    font-size: 1.0625rem;
-    text-align: left;
-  }
-  .subtainer-right {
-    width: 100%;
-    max-width: 540px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .subtainer-right .notice {
+    padding: 17px 0;
     min-height: 60px;
-    margin-bottom: 24px;
+    font-size: 1rem;
   }
   .subtainer-right .notice .nline {
     display: inline-block;
   }
   .subtainer-right .signupForm {
-    padding: 40px;
+    width: 100%;
+    min-height: 475px;
+    padding: 0 40px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -249,6 +273,10 @@ p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-bottom: 0;
+  }
+  .subtainer-right .fields {
+    margin-bottom: 20px;
   }
 }
 /*# sourceMappingURL=main.css.map */
