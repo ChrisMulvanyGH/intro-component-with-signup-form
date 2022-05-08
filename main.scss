@@ -257,10 +257,24 @@ p {
       justify-content: center;
       align-items: center;
       margin-bottom: 0;
-    }
 
-    .fields {
-      margin-bottom: 20px;
+      .fields {
+        margin-bottom: 20px;
+      }
+
+      .errShow {
+        display: block;
+        border: 1px solid $red;
+      }
+
+      .success {
+        display: block;
+        border: 1px solid $green;
+      }
+
+      .errHide {
+        display: none;
+      }
     }
   }
 }

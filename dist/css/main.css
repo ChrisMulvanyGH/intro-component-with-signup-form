@@ -275,8 +275,19 @@ p {
             align-items: center;
     margin-bottom: 0;
   }
-  .subtainer-right .fields {
+  .subtainer-right .signupForm .fields {
     margin-bottom: 20px;
+  }
+  .subtainer-right .signupForm .errShow {
+    display: block;
+    border: 1px solid #ff7a7a;
+  }
+  .subtainer-right .signupForm .success {
+    display: block;
+    border: 1px solid #38cc8c;
+  }
+  .subtainer-right .signupForm .errHide {
+    display: none;
   }
 }
 /*# sourceMappingURL=main.css.map */
