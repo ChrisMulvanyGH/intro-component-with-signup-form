@@ -1,45 +1,49 @@
-const form = document.querySelector('#signup');
-const fName = document.querySelector('#fname');
-const lName = document.querySelector('#lname');
-const eMail = document.querySelector('#email');
-const pwd = document.querySelector('#pwd');
+const form = document.querySelector("form");
+const formInputs = document.querySelectorAll("input");
+const formErrImg = document.querySelectorAll(".signup__form--error-img");
+const formErrTxt = document.querySelectorAll(".signup__form--error-txt");
 const emailRegex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
 
 
-form.addEventListener('submit', function(event) {
-    
-    // Prevent the default form behviour
+form.addEventListener('submit', function (event) {
     event.preventDefault();
 
-    // Check each of the form fields
-    checkTextField(fName);
-    checkTextField(lName);
-    checkEmailField(eMail);
-    checkTextField(pwd);
+    for(let i=0; i<formInputs.length; i++) {
 
+        if (formInputs[i].value !== "") {
+            
+            formInputs[i].style.borderColor = 'green';
 
-    // Check the text input fields
-    function checkTextField(field) {
-        if(field.value != "") {
-            field.classList.add('success');
-            // form.reset();
+        } else if(formInputs[i].type == "email" && emailRegex.test(formInputs[i].value)) {
+            
+            formInputs[i].style.borderColor = 'green';
+
+        } else if(formInputs[i].type == "email" && !emailRegex.test(formInputs[i].value)) {
+
+            formInputs[i].setAttribute('placeholder', 'email@example/com');
+            formInputs[i].className += ' redPlaceHolder';
+
+            formInputs[i].style.borderColor = 'red';
+            formErrImg[i].classList.remove("hidden");
+            formErrImg[i].classList.add("show");
+            
+            formInputs[i].style.marginBottom = '.2rem';
+            formErrTxt[i].classList.remove("hidden");
+            formErrTxt[i].classList.add("show");
         }
-        else 
-        {
-            field.classList.add('errShow');
+        
+        else {
+
+            formInputs[i].setAttribute('placeholder', '');
+
+            formInputs[i].style.borderColor = 'red';
+            formErrImg[i].classList.remove("hidden");
+            formErrImg[i].classList.add("show");
+            
+            formInputs[i].style.marginBottom = '.2rem';
+            formErrTxt[i].classList.remove("hidden");
+            formErrTxt[i].classList.add("show");
         }
     }
 
-    // Check the email input field
-    function checkEmailField(field) {
-        if(field.value != "" && emailRegex.test(eMail.value)) {
-            field.classList.add('success');
-            form.reset();
-        }
-        else
-        {
-            field.classList.add('errShow');
-        }
-    }
 });
-
