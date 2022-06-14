@@ -7,40 +7,59 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Intro component with sign up form</title>
   <link rel="stylesheet" href="dist/css/main.css">
+  <script src="main.js" defer></script>
 </head>
 
 <body>
   <main>
     <article class="container">
-      <header class="header">
-        <h1 class="title">Learn to code by watching others</h1>
-      </header>
 
+      <div class="subtainer-left">
+        <header class="header">
+          <h1 class="title">Learn to code by watching others</h1>
+        </header>
 
-      <p class="description">See how experienced developers solve problems in real-time. Watching scripted tutorials is
-        great, but understanding how developers think is invaluable.</p>
-
-      <div class="notice">
-        <span class="bold">Try it free 7 days</span> then <span class="nline">$20/mo. thereafter</span>
+        <p class="description">See how experienced developers solve problems in real-time. Watching scripted tutorials
+          is great, but understanding how developers think is invaluable.</p>
       </div>
 
-      <form action="" name="signup" class="signupForm">
+      <div class="subtainer-right">
+        <div class="notice">
+          <span class="bold">Try it free 7 days</span> then <span class="nline">$20/mo. thereafter</span>
+        </div>
 
-        <label for="fname" class="labels"></label>
-        <input type="text" name="firstname" id="fname" class="fields" placeholder="First Name">
+        <form name="signup" id="signupForm" class="signup__form">
 
-        <label for="lname" class="labels"></label>
-        <input type="text" name="lastname" id="lname" class="fields" placeholder="Last Name">
+          <div class="signup__form--input-container">
+            <input type="text" id="fname" class="signup__form--input" placeholder="First Name">
+            <img src="images/icon-error.svg" alt="Error Alert" class="signup__form--error-img hidden">
+          </div>
+          <p class="signup__form--error-txt hidden" aria-live="polite">First Name cannot be empty</p>
 
-        <label for="email" class="labels"></label>
-        <input type="email" name="usermail" id="email" class="fields" placeholder="Email Address">
+          <div class="signup__form--input-container">
+            <input type="text" id="lname" class="signup__form--input" placeholder="Last Name">
+            <img src="images/icon-error.svg" alt="Error Alert" class="signup__form--error-img hidden">
+          </div>
+          <p class="signup__form--error-txt hidden" aria-live="polite">Last Name cannot be empty</p>
 
-        <label for="pwd" class="labels"></label>
-        <input type="password" name="password" id="pwd" class="fields" placeholder="Password">
+          <div class="signup__form--input-container">
+            <input type="email" id="email" class="signup__form--input" placeholder="Email Address">
+            <img src="images/icon-error.svg" alt="Error Alert" class="signup__form--error-img hidden">
+          </div>
+          <span class="signup__form--error-txt hidden" aria-live="polite">Looks like this is not an email</span>
 
-        <button type="submit" id="submitBtn" class="subBtn">Claim your free trial</button>
-        <p>By clicking the button, you are agreeing to our Terms and Services</p>
-      </form>
+          <div class="signup__form--input-container">
+            <input type="password" id="pwd" class="signup__form--input" placeholder="Password">
+            <img src="images/icon-error.svg" alt="Error Alert" class="signup__form--error-img hidden">
+          </div>
+          <p class="signup__form--error-txt hidden" aria-live="polite">Password cannot be empty</p>
+
+          <button type="submit" id="submitBtn" class="subBtn">Claim your free trial</button>
+
+          <p class="tandcs">By clicking the button, you are agreeing to our <span class="highlight">Terms and
+              Services</span></p>
+        </form>
+      </div>
     </article>
   </main>
   <!-- <footer>
