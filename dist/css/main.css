@@ -58,6 +58,26 @@ p {
   font-family: 'Poppins', sans-serif;
 }
 
+footer {
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+  color: white;
+}
+
+footer .attribution a {
+  color: #3e3c49;
+}
+
 /* -------------------------------------------------------------------------------------------- */
 .container {
   display: -webkit-box;
@@ -71,7 +91,6 @@ p {
       -ms-flex-align: center;
           align-items: center;
   width: 90vw;
-  height: 100vh;
   max-width: 375px;
   margin: 0 auto;
 }
@@ -231,15 +250,6 @@ p {
 .signup__form .tandcs .highlight {
   font-weight: 700;
   color: #ff7a7a;
-}
-
-.footer .attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
-.footer .attribution a {
-  color: #3e52a3;
 }
 
 /* -------------------------------------------------------------------------------------------- */

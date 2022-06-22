@@ -66,6 +66,22 @@ p {
   font-family: 'Poppins', sans-serif;
 }
 
+footer {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .attribution {
+    font-size: 0.6875rem;
+    text-align: center;
+    color: $white;
+  }
+
+  .attribution a {
+    color: $darkBlue;
+  }
+}
+
 /* -------------------------------------------------------------------------------------------- */
 
 .container {
@@ -73,7 +89,7 @@ p {
   flex-direction: column;
   align-items: center;
   width: 90vw;
-  height: 100vh;
+  // height: 100vh;
   max-width: $mobile;
   margin: 0 auto;
 }
@@ -207,19 +223,6 @@ p {
       color: $red;
     }
   }
-}
-
-.footer {
-
-  .attribution {
-    font-size: 11px;
-    text-align: center;
-  }
-
-  .attribution a {
-    color: #3e52a3;
-  }
-
 }
 
 /* -------------------------------------------------------------------------------------------- */
