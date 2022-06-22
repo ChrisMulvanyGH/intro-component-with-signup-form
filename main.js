@@ -1,49 +1,51 @@
-const form = document.querySelector("form");
-const formInputs = document.querySelectorAll("input");
-const formErrImg = document.querySelectorAll(".signup__form--error-img");
-const formErrTxt = document.querySelectorAll(".signup__form--error-txt");
-const emailRegex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+(function () {
 
+    "use strict";
 
-form.addEventListener('submit', function (event) {
-    event.preventDefault();
+    const form = document.querySelector("form");
+    const formInputs = document.querySelectorAll("input");
+    const formErrImg = document.querySelectorAll(".signup__form--error-img");
+    const formErrTxt = document.querySelectorAll(".signup__form--error-txt");
+    const emailRegex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
 
-    for(let i=0; i<formInputs.length; i++) {
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
 
-        if (formInputs[i].value !== "") {
-            
-            formInputs[i].style.borderColor = 'green';
+        for (let i = 0; i < formInputs.length; i++) {
 
-        } else if(formInputs[i].type == "email" && emailRegex.test(formInputs[i].value)) {
-            
-            formInputs[i].style.borderColor = 'green';
+            if (formInputs[i].value !== "") {
 
-        } else if(formInputs[i].type == "email" && !emailRegex.test(formInputs[i].value)) {
+                formInputs[i].style.borderColor = 'green';
 
-            formInputs[i].setAttribute('placeholder', 'email@example/com');
-            formInputs[i].className += ' redPlaceHolder';
+            } else if (formInputs[i].type == "email" && emailRegex.test(formInputs[i].value)) {
 
-            formInputs[i].style.borderColor = 'red';
-            formErrImg[i].classList.remove("hidden");
-            formErrImg[i].classList.add("show");
-            
-            formInputs[i].style.marginBottom = '.2rem';
-            formErrTxt[i].classList.remove("hidden");
-            formErrTxt[i].classList.add("show");
+                formInputs[i].style.borderColor = 'green';
+
+            } else if (formInputs[i].type == "email" && !emailRegex.test(formInputs[i].value)) {
+
+                formInputs[i].setAttribute('placeholder', 'email@example/com');
+                formInputs[i].className += ' redPlaceHolder';
+
+                formInputs[i].style.borderColor = 'red';
+                formErrImg[i].classList.remove("hidden");
+                formErrImg[i].classList.add("show");
+
+                formInputs[i].style.marginBottom = '.2rem';
+                formErrTxt[i].classList.remove("hidden");
+                formErrTxt[i].classList.add("show");
+            } else {
+
+                formInputs[i].setAttribute('placeholder', '');
+
+                formInputs[i].style.borderColor = 'red';
+                formErrImg[i].classList.remove("hidden");
+                formErrImg[i].classList.add("show");
+
+                formInputs[i].style.marginBottom = '.2rem';
+                formErrTxt[i].classList.remove("hidden");
+                formErrTxt[i].classList.add("show");
+            }
         }
-        
-        else {
 
-            formInputs[i].setAttribute('placeholder', '');
-
-            formInputs[i].style.borderColor = 'red';
-            formErrImg[i].classList.remove("hidden");
-            formErrImg[i].classList.add("show");
-            
-            formInputs[i].style.marginBottom = '.2rem';
-            formErrTxt[i].classList.remove("hidden");
-            formErrTxt[i].classList.add("show");
-        }
-    }
-
-});
+    });
+})();
