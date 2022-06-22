@@ -45,7 +45,7 @@ p {
 
 body {
   background-color: $red;
-  background-image: url('/../images/bg-intro-mobile.png');
+  background-image: url('./../images/bg-intro-mobile.png');
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Poppins', sans-serif;
@@ -230,7 +230,7 @@ footer {
 @media (min-width: 1440px) {
 
   body {
-    background-image: url('/../images/bg-intro-desktop.png');
+    background-image: url('./../images/bg-intro-desktop.png');
   }
 
   .container {
