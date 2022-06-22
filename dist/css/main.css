@@ -37,7 +37,7 @@ p {
 
 body {
   background-color: #ff7a7a;
-  background-image: url("./../images/bg-intro-mobile.png");
+  background-image: url("../images/bg-intro-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Poppins', sans-serif;
